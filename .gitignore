@@ -1,0 +1,29 @@
+# Provider binary
+terraform-provider-asgardeo
+terraform-provider-asgardeo_*
+
+# Terraform working files
+**/.terraform/
+**/.terraform.lock.hcl
+*.tfstate
+*.tfstate.backup
+*.tfplan
+
+# Go build artefacts
+*.exe
+*.test
+*.out
+dist/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+
+# Environment / secrets — never commit these
+.env
+*.env

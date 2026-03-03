@@ -1,0 +1,18 @@
+---
+page_title: "asgardeo_application Data Source - asgardeo"
+subcategory: ""
+description: |-
+  Looks up an existing Asgardeo application by name or ID.
+---
+
+# asgardeo_application (Data Source)
+
+Use this data source to retrieve details about an existing Asgardeo application,
+including its `client_id`. This is useful for referencing built-in applications
+or applications created outside of Terraform.
+
+## Example Usage
+
+{{ tffile "examples/data-sources/asgardeo_application/data-source.tf" }}
+
+{{ .SchemaMarkdown | trimspace }}

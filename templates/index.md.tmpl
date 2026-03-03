@@ -1,0 +1,44 @@
+---
+page_title: "Provider: Asgardeo"
+description: |-
+  The Asgardeo provider allows Terraform to manage applications and identity resources in WSO2 Asgardeo.
+---
+
+# Asgardeo Provider
+
+The **Asgardeo** Terraform provider enables infrastructure-as-code management of
+[Asgardeo](https://wso2.com/asgardeo/) — WSO2's cloud-native customer identity
+and access management (CIAM) platform.
+
+Use the provider to:
+
+- Register OIDC and SAML applications
+- Manage OAuth2 grant types, callback URLs, and allowed origins
+- Configure advanced settings (consent, token expiry, PKCE)
+- Look up existing applications via the data source
+
+## Authentication
+
+Create an **M2M application** in the Asgardeo Console, then authorise it with
+the management API scopes below:
+
+| Scope | Used for |
+|---|---|
+| `internal_application_mgt_create` | Creating applications |
+| `internal_application_mgt_view` | Reading applications |
+| `internal_application_mgt_update` | Updating applications |
+| `internal_application_mgt_delete` | Deleting applications |
+
+Credentials can be supplied via provider arguments or environment variables:
+
+| Argument | Environment variable |
+|---|---|
+| `org_name` | `ASGARDEO_ORG_NAME` |
+| `client_id` | `ASGARDEO_CLIENT_ID` |
+| `client_secret` | `ASGARDEO_CLIENT_SECRET` |
+
+## Example Usage
+
+{{ tffile "examples/provider/provider.tf" }}
+
+{{ .SchemaMarkdown | trimspace }}
