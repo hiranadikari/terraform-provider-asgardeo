@@ -24,6 +24,12 @@ dist/
 # macOS
 .DS_Store
 
+# Terraform variable files — may contain credentials, never commit
+*.tfvars
+*.tfvars.json
+# Exception: example tfvars that contain only placeholder values are allowed
+!examples/**/*.tfvars.example
+
 # Environment / secrets — never commit these
 .env
 *.env

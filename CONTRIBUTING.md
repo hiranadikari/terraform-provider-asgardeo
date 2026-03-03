@@ -117,8 +117,32 @@ Acceptance tests must:
    docs, and list the acceptance test results.
 6. A maintainer will review within 5 business days.
 
-**PR Title format:** `feat: add asgardeo_identity_provider resource` (use
-conventional commits: `feat`, `fix`, `docs`, `chore`, `refactor`).
+### Commit and PR title format
+
+We follow the **WSO2 imperative sentence** convention — a plain present-tense
+verb phrase with no type prefix. The first word is capitalised; no trailing period.
+
+```
+Add asgardeo_identity_provider resource
+Fix nil pointer dereference in OIDC config flattener
+Update refresh token expiry default to 86400 seconds
+Remove deprecated accessTokenAttributes field
+Improve error messages for 401 responses
+```
+
+For changes scoped to a subsystem, prefix with the area in square brackets:
+
+```
+[OIDC] Add support for hybrid flow response types
+[SAML] Handle metadata URL configuration
+[Docs] Update Rancher OIDC example with correct callback URL
+```
+
+**Do not use** `feat:`, `fix:`, `chore:` or other conventional-commit prefixes.
+
+Commit messages on the branch should follow the same convention. Squash or
+rebase to a clean history before requesting review — avoid commits like
+`wip`, `fix review comments`, or `update`.
 
 ---
 
